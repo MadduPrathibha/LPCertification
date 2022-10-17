@@ -1,45 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Welcome page</title>
-    </head>
-    <body>
-       <h1>Welcome to the course</h1>
-       
-
-    </body>
-
+<html>
+<head>
+<!-- BEGIN LivePerson Monitor. -->
 <script type="text/javascript">window.lpTag=window.lpTag||{},'undefined'==typeof window.lpTag._tagCount?(window.lpTag={wl:lpTag.wl||null,scp:lpTag.scp||null,site:'39341507'||'',section:lpTag.section||'',tagletSection:lpTag.tagletSection||null,autoStart:lpTag.autoStart!==!1,ovr:lpTag.ovr||{},_v:'1.10.0',_tagCount:1,protocol:'https:',events:{bind:function(t,e,i){lpTag.defer(function(){lpTag.events.bind(t,e,i)},0)},trigger:function(t,e,i){lpTag.defer(function(){lpTag.events.trigger(t,e,i)},1)}},defer:function(t,e){0===e?(this._defB=this._defB||[],this._defB.push(t)):1===e?(this._defT=this._defT||[],this._defT.push(t)):(this._defL=this._defL||[],this._defL.push(t))},load:function(t,e,i){var n=this;setTimeout(function(){n._load(t,e,i)},0)},_load:function(t,e,i){var n=t;t||(n=this.protocol+'//'+(this.ovr&&this.ovr.domain?this.ovr.domain:'lptag.liveperson.net')+'/tag/tag.js?site='+this.site);var o=document.createElement('script');o.setAttribute('charset',e?e:'UTF-8'),i&&o.setAttribute('id',i),o.setAttribute('src',n),document.getElementsByTagName('head').item(0).appendChild(o)},init:function(){this._timing=this._timing||{},this._timing.start=(new Date).getTime();var t=this;window.attachEvent?window.attachEvent('onload',function(){t._domReady('domReady')}):(window.addEventListener('DOMContentLoaded',function(){t._domReady('contReady')},!1),window.addEventListener('load',function(){t._domReady('domReady')},!1)),'undefined'===typeof window._lptStop&&this.load()},start:function(){this.autoStart=!0},_domReady:function(t){this.isDom||(this.isDom=!0,this.events.trigger('LPT','DOM_READY',{t:t})),this._timing[t]=(new Date).getTime()},vars:lpTag.vars||[],dbs:lpTag.dbs||[],ctn:lpTag.ctn||[],sdes:lpTag.sdes||[],hooks:lpTag.hooks||[],identities:lpTag.identities||[],ev:lpTag.ev||[]},lpTag.init()):window.lpTag._tagCount+=1;</script>
+<!-- END LivePerson Monitor. -->
+<title>Auth</title>
+</head>
+<body>
+Authenticated Liveperson challenge
+ 
+  <br/>
+  <p>
+  <a href='/LPCertification/index.html' target='_blank'>Go to Unauthenticated</a>
+  </p>
+</body>
 <script>
-
-    lpTag.identities = [];
-    
+  function identityFn(callback) {
+      callback({
+          iss: "https://jarakkal.github.io",
+          acr: "loa1",
+          sub: "16723672"
+      });
+  } 
     lpTag.identities.push(identityFn);
     
-    function identityFn(callback) {
-    
-    console.log("-----");
-    
-    callback({
-    
-    iss: "https://madduprathibha.github.io/LoginPage/",
-    
-    acr: "loa1",
-    
-    sub: "1234567890"
-    
-    });
-    
-    }
-    
-    function initAuth(callback) {
-    
-    console.log("----");
-    
-    callback("eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IlByYXRoaWJoYSBNYWRkdSIsImFkbWluIjp0cnVlLCJpc3MiOiJodHRwczovL21hZGR1cHJhdGhpYmhhLmdpdGh1Yi5pby9Mb2dpblBhZ2UvIiwiaWF0IjoxNTE2MjM5MDIyfQ.qWL16Ng57xN3BO1aox2bMDVkjVKgKaIgwRs6z7wR6tk_6I63v8R_8WB0GUXPo2i3GaAQh_3ETSIKiDWREYm67R-BaG3bxRr1UXA0FkODkIFXZEu0yEc_Ob5l0KZtGuJHqW6tA8Xytb_XwXKlazX3kew_IrAP4aCi9FugqIskZMpvkBBJqV3433fd6OpsMpDd_AoE2EiukOZ-7C9_LwFDYSQvUxxReXIVNCM3zJwuhhw_sEEy4C9Pj7xQE9vDcy8lIOz97Kt-IX4dMH4gOgCtsxqU-Td66wk5RPCf8hJOETiRf2FQ1RtH_a67CK8I7B_PgUwIha8K0lBAOeVDsJqFeg");
-    
-    }
-    
-    </script>
+
+  
+  function LPJsMethodName(callback) {
+    console.log('Authentication token requested by Liveperson');
+    // const id_token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2phcmFra2FsLmdpdGh1Yi5pbyIsImFjciI6ImxvYTEiLCJzdWIiOiIxNjcyMzY3MiIsIm5hbWUiOiJKb2huIERvZSIsImFkbWluIjp0cnVlLCJpYXQiOjE0NDYxMTE3NTIsImV4cCI6MTYzNjk1MzY0NywicHJlZmVycmVkX3VzZXJuYW1lIjoiSm9obkRvZSIsInBob25lX251bWJlciI6IisxLTEwLTM0NC0zNzY1MzMzIn0.m4A9ZbW1F9Y693_nLnvgCfuRKzOM7HYHzmH0DNXRIm4Cx5o5KDz4eoo6pYbuwwTVJq5a5jHx15Qan4bMF0kULOThk6gsN7q06055-cfJxZhMKrKV3cxgpxr2OY5dkWByoIdGeIOqCzo51jLbWFrKWBuFF7TB_WZcx1zdaDjbV5suTQRmZY3TQIAZFeLPeXyotZ4YaD7rH9Ddhz9LJf2qVgehvuFQK8p_u1-qZr2LSva5kOM5AkWpIDommddlC2AT40v6WpzkpX8Xe98ibVvB4NBm-_vS2lcLrNQwHOXdUYcyDv2NPdBsT9McoSBZkGnnlQid3tB84NW48_5o0DEA8Q";
+    const id_token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2phcmFra2FsLmdpdGh1Yi5pbyIsImFjciI6ImxvYTEiLCJzdWIiOiIxNjcyMzY3MiIsIm5hbWUiOiJKb2huIERvZSIsImFkbWluIjp0cnVlLCJpYXQiOjE0NDYxMTE3NTIsImV4cCI6MTY3MDQ5OTA4MSwicHJlZmVycmVkX3VzZXJuYW1lIjoiSm9obkRvZSIsInBob25lX251bWJlciI6IisxLTEwLTM0NC0zNzY1MzMzIn0.DvY7TMg0ckvjuBDyIJgRIKnd2MwTv9jN1wOa37P5UuxJ-oloScxds45CkHRbXpAkfNCYjBLmBEhL12iJvQrScwtDtzh304YfKce1Irwq62xT2uCVeXug0Wf_yoZf2B0D-WlhbXD-sM1OViedUbj4bO4S7DA4e-xKANc1vS1I6mjvtuQVogDyeDRn-JxIaAy8aoLBP1zELvBDerdDcP7DmUc5Uy4CV-vb2Lb2LW0LLp5t7ciqLQAXSIs_91GYTR9aeFJaCoGilj4XOV7B6ff7yAk17VOdGPXMYt51ppfcqDvagetSYMxEQXpIjHeagiTlX4K77uTz1CbjcV4TzAfkVg";
+    callback(id_token);            
+  }
+  </script>
 </html>
